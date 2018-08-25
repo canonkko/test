@@ -1,0 +1,44 @@
+@@include('../temlates/head.html')
+
+	@@include('../temlates/header.html')
+
+	<div class="content">
+		<div class="container">
+			<div class="content-box">
+				<aside class="sidebar">
+					@@include('../temlates/mob_menu.html')
+					<div class="sidebar__head">
+						<h3>Register</h3>
+						<span>or <a href="/login.html">Log in</a></span>
+					</div>
+					<form class="sidebar__form">
+						<div class="input-group">
+							<input type="email" id="email" required>
+							<label for="email">Email</label>
+						</div>
+						<div class="input-group">
+							<input type="password" id="password" required>
+							<label for="password">Password</label>
+						</div>
+						<div class="input-group">
+							<input type="password" id="password2" required>
+							<label for="password2">Password confirm</label>
+						</div>
+						<div class="input-group">
+							<input type="text" id="name" required>
+							<label for="name">Name</label>
+						</div>
+						<div class="input-group">
+							<input type="text" id="surname" required>
+							<label for="surname">Surname</label>
+						</div>
+						<button class="btn">Register</button>
+					</form>
+				</aside>
+				@@include('../temlates/main.html')
+			</div>
+		</div>
+	</div>
+
+
+@@include('../temlates/footer.html')

@@ -1,0 +1,106 @@
+@import "normalize"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "mixins"
+@import "buttons"
+
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html,
+body
+	font-size: 16px
+	height: 100%
+
+body
+	font-family: $default-font
+	color: $text
+	line-height: 1.32
+	position: relative
+
+a
+	text-decoration: none
+	+trs()
+	&:hover
+		text-decoration: none
+	&:focus
+		text-decoration: none
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+h1
+	margin-top: 0
+
+h3
+	+rfs(20)
+	margin: 0
+
+p
+	color: $text2
+	line-height: 1.5
+
+.wrapper
+	min-height: 100%
+	overflow: hidden
+	position: relative
+	background-color: #0c0c15
+
+.container
+	max-width: 1366px
+	margin: 0 auto
+	padding: 0 15px
+
+.content
+	position: absolute
+	top: 53px
+	left: 0
+	right: 0
+	bottom: 30px
+	.container
+		height: 100%
+
+.content-box
+	display: flex
+	height: 100%
+
+// ::selection
+// 	background-color: $accent
+// 	color: #fff
+
+
+@import "_sections/**/*.sass"
+@import "media" // Всегда в конце

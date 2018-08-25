@@ -1,0 +1,75 @@
+.header
+	padding: 9px 0
+	background-color: $dark
+
+.header-box
+	display: flex
+	align-items: center
+
+.nav
+	flex-grow: 1
+
+.nav-menu
+	display: flex
+	font-size: 14px
+
+.nav-menu__item
+	margin-left: 40px
+	&:last-child	
+		margin-left: auto
+
+.nav-menu__link
+	color: #656999
+	&:hover
+		color: #fff
+
+.nav-menu__login
+	border-radius: 4px
+	border: solid 0.5px $text2
+	padding: 2px 13px 6px
+	opacity: 0.7
+	color: #fff
+	&:hover
+		opacity: 1
+
+.toggle-mnu
+	width: 30px
+	height: 20px
+	margin-right: 15px
+	display: none
+	+trs()
+
+.toggle-mnu span:after,
+.toggle-mnu span:before
+	content: ""
+	position: absolute
+	left: 0
+	top: 9px
+
+.toggle-mnu span:after
+	top: 18px
+
+.toggle-mnu span
+	position: relative
+	display: block
+
+.toggle-mnu span,
+.toggle-mnu span:after,
+.toggle-mnu span:before
+	width: 100%
+	height: 2px
+	background-color: #fff
+	transition: all 0.3s 0.1s
+	backface-visibility: hidden
+	border-radius: 2px
+
+.toggle-mnu.on
+	background-color: transparent
+	span
+		background-color: transparent
+
+.toggle-mnu.on span:before
+	transform: rotate(45deg)
+
+.toggle-mnu.on span:after
+	transform: rotate(-45deg) translate(6px, -7px)
